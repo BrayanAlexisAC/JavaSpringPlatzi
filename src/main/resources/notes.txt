@@ -1,0 +1,12 @@
+#########################################################
+#################### JPA Annotations ####################
+#########################################################
+
+@Entity: it's a java class that represents a table of a database
+@Table: Allow to receive database table name
+@Column: Allow to configure a specific name of an attribute own object
+@id: Indicate that attribute contains a primary key
+@EmbededID: Indicate that attribute contains a composed primary key
+@GenerateValue: Allow assign a default value in an attribute own object
+@OneToMany: Allow configured a relation between one object to many objects
+@ManyToOne: Allow configured a relation between many objects to one object
