@@ -1,10 +1,7 @@
 package com.training.spring.persistence.entity;
 
 import com.training.spring.persistence.entity.composedPK.OrderByProductsPK;
-import jakarta.persistence.Column;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "COMPRAS_PRODUCTOS")
@@ -21,6 +18,14 @@ public class OrderByProductsModel {
 
     @Column(name = "estado")
     private Boolean available;
+
+    @ManyToOne
+    @JoinColumn(name = "id_compra", insertable = false, updatable = false)
+    private OrderModel order;
+
+    @ManyToOne
+    @JoinColumn(name = "id_producto", insertable = false, updatable = false)
+    private ProductModel product;
 
     public OrderByProductsPK getComposedId() {
         return composedId;

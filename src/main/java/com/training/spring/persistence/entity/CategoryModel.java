@@ -2,6 +2,8 @@ package com.training.spring.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "CATEGORIAS")
 public class CategoryModel {
@@ -16,6 +18,9 @@ public class CategoryModel {
 
     @Column(name = "estado")
     private Boolean available;
+
+    @OneToMany(mappedBy = "category")
+    private List<ProductModel> products;
 
     public Integer getId() {
         return id;
@@ -39,5 +44,13 @@ public class CategoryModel {
 
     public void setAvailable(Boolean available) {
         this.available = available;
+    }
+
+    public List<ProductModel> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<ProductModel> products) {
+        this.products = products;
     }
 }

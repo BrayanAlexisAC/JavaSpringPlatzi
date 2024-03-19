@@ -1,9 +1,8 @@
 package com.training.spring.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "CLIENTES")
@@ -27,6 +26,9 @@ public class CustomerModel {
 
     @Column(name = "correo_electronico")
     private String emailAddress;
+
+    @OneToMany(mappedBy = "customer")
+    private List<OrderModel> orders;
 
     public String getId() {
         return id;

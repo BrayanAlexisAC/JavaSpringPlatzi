@@ -3,6 +3,7 @@ package com.training.spring.persistence.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "COMPRAS")
@@ -27,6 +28,13 @@ public class OrderModel {
 
     @Column(name = "estado")
     private Character status;
+
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private CustomerModel customer;
+
+    @OneToMany(mappedBy = "order")
+    private List<OrderByProductsModel> products;
 
     public Integer getId() {
         return id;

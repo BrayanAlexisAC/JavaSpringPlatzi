@@ -29,6 +29,10 @@ public class ProductModel {
     @Column(name = "estado")
     private Boolean available;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private CategoryModel category;
+
     public Integer getId() {
         return id;
     }
@@ -83,5 +87,13 @@ public class ProductModel {
 
     public void setAvailable(Boolean available) {
         this.available = available;
+    }
+
+    public CategoryModel getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryModel category) {
+        this.category = category;
     }
 }
