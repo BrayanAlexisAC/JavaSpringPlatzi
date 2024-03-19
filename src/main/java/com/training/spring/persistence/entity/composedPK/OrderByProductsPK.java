@@ -3,8 +3,10 @@ package com.training.spring.persistence.entity.composedPK;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 
+import java.io.Serializable;
+
 @Embeddable
-public class OrderByProductsPK {
+public class OrderByProductsPK implements Serializable {
 
     @Column(name = "id_compra")
     private Integer idOrder;
