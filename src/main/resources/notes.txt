@@ -1,4 +1,14 @@
 #########################################################
+###################### Properties ######################
+#########################################################
+spring.application.name => Name own project
+spring.profiles.active => Active profile properties, doesn't matter name, but it's so important this name will be same that own file properties, "dev" = "application-dev.properties"
+spring.datasource.url => data base properties, type, url, name ...
+spring.datasource.username => data base username
+spring.datasource.password => password username
+spring.jpa.properties.hibernate.dialect => Specific to hibernate schema data base for hibernate will be more effective with sintaxis structures
+
+#########################################################
 #################### JPA Annotations ####################
 #########################################################
 
