@@ -11,7 +11,6 @@ spring.jpa.properties.hibernate.dialect => Specific to hibernate schema data bas
 #########################################################
 #################### JPA Annotations ####################
 #########################################################
-
 @Entity: it's a java class that represents a table of a database
 @Table: Allow to receive database table name
 @Column: Allow to configure a specific name of an attribute own object
@@ -20,3 +19,10 @@ spring.jpa.properties.hibernate.dialect => Specific to hibernate schema data bas
 @GenerateValue: Allow assign a default value in an attribute own object
 @OneToMany: Allow configured a relation between one object to many objects
 @ManyToOne: Allow configured a relation between many objects to one object
+
+#########################################################
+################ Spring Data Repositories ###############
+#########################################################
+CRUD Repository: Allows to do create, read, update and delete information in our database
+Paging and Sorting Repository: same CRUD, but besides allow to do paging and sorting information we get in our database
+JPA Repository: same CRUD and Paging, but besides allow to use specific features of JPA
