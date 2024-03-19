@@ -58,4 +58,20 @@ public class OrderByProductsModel {
     public void setAvailable(Boolean available) {
         this.available = available;
     }
+
+    public OrderModel getOrder() {
+        return order;
+    }
+
+    public void setOrder(OrderModel order) {
+        this.order = order;
+    }
+
+    public ProductModel getProduct() {
+        return product;
+    }
+
+    public void setProduct(ProductModel product) {
+        this.product = product;
+    }
 }

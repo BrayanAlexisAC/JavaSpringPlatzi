@@ -83,4 +83,20 @@ public class OrderModel {
     public void setStatus(Character status) {
         this.status = status;
     }
+
+    public CustomerModel getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(CustomerModel customer) {
+        this.customer = customer;
+    }
+
+    public List<OrderByProductsModel> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<OrderByProductsModel> products) {
+        this.products = products;
+    }
 }
