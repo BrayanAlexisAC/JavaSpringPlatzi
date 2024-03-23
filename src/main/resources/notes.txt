@@ -19,6 +19,9 @@ spring.jpa.properties.hibernate.dialect => Specific to hibernate schema data bas
 @GenerateValue: Allow assign a default value in an attribute own object
 @OneToMany: Allow configured a relation between one object to many objects
 @ManyToOne: Allow configured a relation between many objects to one object
+@Query: Allow to create a native query like to do it in a SQL Manager or another one
+@Repository: To indicate spring about a class type repository, that means this class will interactive with our database
+@Component: To indicate spring about this a general component, without specific a component
 
 #########################################################
 ################ Spring Data Repositories ###############
