@@ -7,6 +7,7 @@ import com.training.spring.persistence.mappers.ProductMapper;
 import com.training.spring.persistence.repository.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -17,7 +18,11 @@ import java.util.Optional;
 @Repository
 public class DefaultProductRepository implements ProductRepository {
     Logger log = LoggerFactory.getLogger(DefaultProductRepository.class);
+
+    @Autowired
     protected ProductCrudRepository repository;
+
+    @Autowired
     protected ProductMapper mapper;
 
     /**

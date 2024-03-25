@@ -9,6 +9,13 @@ spring.datasource.password => password username
 spring.jpa.properties.hibernate.dialect => Specific to hibernate schema data base for hibernate will be more effective with sintaxis structures
 
 #########################################################
+##################### Dependencies ######################
+#########################################################
+What consist injection dependencies? it's about inject an object instance without to do it in each class, that means, we can take an instance and inject it in any class
+Wha is inversion control (IOC)? it's dependencies injection, control about how to we inject dependencies in the objects
+We can inject dependencies of several forms like @Resource, @Autowired and @Qualifier
+
+#########################################################
 #################### JPA Annotations ####################
 #########################################################
 @Entity: it's a java class that represents a table of a database
@@ -29,3 +36,4 @@ spring.jpa.properties.hibernate.dialect => Specific to hibernate schema data bas
 CRUD Repository: Allows to do create, read, update and delete information in our database
 Paging and Sorting Repository: same CRUD, but besides allow to do paging and sorting information we get in our database
 JPA Repository: same CRUD and Paging, but besides allow to use specific features of JPA
+
