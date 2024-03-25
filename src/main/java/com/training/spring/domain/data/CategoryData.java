@@ -13,8 +13,6 @@ public class CategoryData {
 
     private Boolean available;
 
-    private List<ProductModel> products;
-
     public Integer getId() {
         return id;
     }
@@ -37,13 +35,5 @@ public class CategoryData {
 
     public void setAvailable(Boolean available) {
         this.available = available;
-    }
-
-    public List<ProductModel> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<ProductModel> products) {
-        this.products = products;
     }
 }

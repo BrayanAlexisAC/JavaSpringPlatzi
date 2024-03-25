@@ -10,7 +10,7 @@ public class ProductData {
     private Double  price;
     private Integer stockQuantity;
     private Boolean available;
-    private CategoryModel category;
+    private CategoryData category;
 
     public Integer getId() {
         return id;
@@ -52,11 +52,11 @@ public class ProductData {
         this.available = available;
     }
 
-    public CategoryModel getCategory() {
+    public CategoryData getCategory() {
         return category;
     }
 
-    public void setCategory(CategoryModel category) {
+    public void setCategory(CategoryData category) {
         this.category = category;
     }
 }
