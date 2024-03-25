@@ -60,14 +60,14 @@ public class DefaultProductRepository implements ProductRepository {
     }
 
     @Override
-    public boolean save(ProductData productData){
+    public ProductData save(ProductData productData){
         try {
             ProductModel productModel = mapper.toProductModel(productData);
-            repository.save(productModel);
-            return true;
+            productModel = repository.save(productModel);
+            return mapper.toProductData(productModel);
         } catch (Exception e){
             log.error("Error with save product message:{}, stacktrace:{}", e.getMessage(), Arrays.toString(e.getStackTrace()));
-            return false;
+            return null;
         }
     }
 

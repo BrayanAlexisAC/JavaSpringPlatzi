@@ -6,9 +6,11 @@ import com.training.spring.domain.services.ProductService;
 import com.training.spring.persistence.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DefaultProductService implements ProductService {
 
     @Autowired
@@ -40,7 +42,7 @@ public class DefaultProductService implements ProductService {
     }
 
     @Override
-    public boolean save(ProductData productData) {
+    public ProductData save(ProductData productData) {
         return repository.save(productData);
     }
 

@@ -35,7 +35,7 @@ public interface ProductRepository {
      * @param productData ProductData
      * @return boolean
      */
-    boolean save(ProductData productData);
+    ProductData save(ProductData productData);
 
     /**
      * Delete a product
