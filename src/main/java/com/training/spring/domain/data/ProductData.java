@@ -7,6 +7,7 @@ public class ProductData {
 
     private Integer id;
     private String name;
+    private Integer idCategory;
     private Double  price;
     private Integer stockQuantity;
     private Boolean available;
@@ -26,6 +27,14 @@ public class ProductData {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getIdCategory() {
+        return idCategory;
+    }
+
+    public void setIdCategory(Integer idCategory) {
+        this.idCategory = idCategory;
     }
 
     public Double getPrice() {

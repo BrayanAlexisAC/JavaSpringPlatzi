@@ -14,6 +14,7 @@ public interface ProductMapper {
     @Mappings({
         @Mapping(source = "id", target = "id"),
         @Mapping(source = "name", target = "name"),
+        @Mapping(source = "idCategory", target = "idCategory"),
         @Mapping(source = "price", target = "price"),
         @Mapping(source = "stockQuantity", target = "stockQuantity"),
         @Mapping(source = "available", target = "available"),
@@ -24,7 +25,6 @@ public interface ProductMapper {
 
     @InheritInverseConfiguration
     @Mappings({
-        @Mapping(target = "idCategory", ignore = true),
         @Mapping(target = "barCode", ignore = true)
     })
     ProductModel toProductModel(ProductData productData);
