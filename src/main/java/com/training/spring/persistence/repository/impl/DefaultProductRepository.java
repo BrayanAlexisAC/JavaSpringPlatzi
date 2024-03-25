@@ -25,21 +25,13 @@ public class DefaultProductRepository implements ProductRepository {
     @Autowired
     protected ProductMapper mapper;
 
-    /**
-     * Get all products
-     * @return List<ProductModel>
-     */
+    @Override
     public List<ProductData> getAll(){
         List<ProductModel> lstProducts = (List<ProductModel>) repository.findAll();
         return mapper.toProducts(lstProducts);
     }
 
-    /**
-     * Get back a list of products by category
-     * @param idCategory int
-     * @param nativeMode boolean
-     * @return List<ProductModel>
-     */
+    @Override
     public List<ProductData> getProductsByCategory(int idCategory, boolean nativeMode){
         if (nativeMode){
             List<ProductModel> productModel = repository.getProductsByCategory(idCategory);
@@ -50,12 +42,7 @@ public class DefaultProductRepository implements ProductRepository {
         }
     }
 
-    /**
-     * Get back a list of products by less stock quantity, only available products
-     * @param stockQuantity int
-     * @param nativeMode boolean
-     * @return List<ProductModel>
-     */
+    @Override
     public List<ProductData> getProductsByStockAndAvailable(int stockQuantity, boolean nativeMode){
         if (nativeMode){
             List<ProductModel> lstProducts = repository.getProductsByStockAndAvailable(stockQuantity, true);
@@ -66,21 +53,13 @@ public class DefaultProductRepository implements ProductRepository {
         }
     }
 
-    /**
-     * Get back a product by id
-     * @param idProduct int
-     * @return ProductModel
-     */
+    @Override
     public ProductData getProductById(int idProduct){
         Optional<ProductModel> productModel = repository.findById(idProduct);
         return productModel.map(product -> mapper.toProductData(product)).orElse(null);
     }
 
-    /**
-     * Save a product by id
-     * @param productData ProductData
-     * @return boolean
-     */
+    @Override
     public boolean save(ProductData productData){
         try {
             ProductModel productModel = mapper.toProductModel(productData);
@@ -92,11 +71,7 @@ public class DefaultProductRepository implements ProductRepository {
         }
     }
 
-    /**
-     * Delete a product
-     * @param productData ProductData
-     * @return boolean
-     */
+    @Override
     public boolean delete(ProductData productData){
         try {
             ProductModel productModel = mapper.toProductModel(productData);
