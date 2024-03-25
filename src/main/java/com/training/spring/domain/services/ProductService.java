@@ -15,18 +15,16 @@ public interface ProductService {
     /**
      * Get back a list of products by category
      * @param idCategory int
-     * @param nativeMode boolean
      * @return List<ProductModel>
      */
-    List<ProductData> getProductsByCategory(int idCategory, boolean nativeMode);
+    List<ProductData> getProductsByCategory(int idCategory);
 
     /**
      * Get back a list of products by less stock quantity, only available products
      * @param stockQuantity int
-     * @param nativeMode boolean
      * @return List<ProductModel>
      */
-    List<ProductData> getProductsByStockAndAvailable(int stockQuantity, boolean nativeMode);
+    List<ProductData> getProductsByStockAndAvailable(int stockQuantity);
 
     /**
      * Get back a product by id
