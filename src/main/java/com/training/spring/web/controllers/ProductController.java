@@ -61,7 +61,7 @@ public class ProductController {
     public ResponseEntity<ProductData> save(@RequestBody ProductData productData){
         // will fix, product does not get back idProduct
         ProductData saveProduct = productService.save(productData);
-        return Objects.nonNull(saveProduct) && saveProduct.getId() > 0 ? new ResponseEntity<>(productData, HttpStatus.CREATED) : new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+        return Objects.nonNull(saveProduct) && saveProduct.getId() > 0 ? new ResponseEntity<>(saveProduct, HttpStatus.CREATED) : new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
     }
 
     @DeleteMapping("/delete/{productId}")
