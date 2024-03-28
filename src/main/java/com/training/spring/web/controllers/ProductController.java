@@ -66,7 +66,7 @@ public class ProductController {
     @DeleteMapping("/delete/{productId}")
     public ResponseEntity<Object> delete(@PathVariable("productId") int productId) throws Exception {
         ProductData productData = productService.getProductById(productId);
-        return productService.delete(productData) ? new ResponseEntity<>(HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return productService.delete(productData) ? new ResponseEntity<>(HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
     }
 
 }

@@ -33,7 +33,7 @@ public class OrderModel {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private CustomerModel customer;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = {CascadeType.ALL})
     private List<OrderByProductsModel> products;
 
     public Integer getId() {

@@ -20,6 +20,7 @@ public class OrderByProductsModel {
     private Boolean available;
 
     @ManyToOne
+    @MapsId(value = "idOrder")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private OrderModel order;
 
