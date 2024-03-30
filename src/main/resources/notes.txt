@@ -37,3 +37,10 @@ CRUD Repository: Allows to do create, read, update and delete information in our
 Paging and Sorting Repository: same CRUD, but besides allow to do paging and sorting information we get in our database
 JPA Repository: same CRUD and Paging, but besides allow to use specific features of JPA
 
+#########################################################
+###################### Configuration ####################
+#########################################################
+@Configuration: Indicate that the class is type Configuration
+@PropertyResource: It allows us searching a file properties with a specific path
+@ConfigurationProperties: It allows searching properties with a specific prefix
+@Value: It allows assign a property value to variable even works like parameter
