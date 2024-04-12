@@ -24,8 +24,10 @@ We can inject dependencies of several forms like @Resource, @Autowired and @Qual
 @id: Indicate that attribute contains a primary key
 @EmbededID: Indicate that attribute contains a composed primary key
 @GenerateValue: Allow assign a default value in an attribute own object
-@OneToMany: Allow configured a relation between one object to many objects
-@ManyToOne: Allow configured a relation between many objects to one object
+@OneToMany: Allow configured a relation between one object to many objects {fetch default value = LAZY}
+@ManyToMany: Allow configured a relation between many objects to many objects {fetch default value = LAZY}
+@ManyToOne: Allow configured a relation between many objects to one object {fetch default value = EAGER}
+@OneToOne: Allow configured a relation between one objects to one object {fetch default value = EAGER}
 @Query: Allow to create a native query like to do it in a SQL Manager or another one
 @Repository: To indicate spring about a class type repository, that means this class will interactive with our database
 @Component: To indicate spring about this a general component, without specific a component
